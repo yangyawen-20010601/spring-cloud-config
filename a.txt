@@ -1,0 +1,242 @@
+专科每年6月毕业7月拿毕业证
+现在2019/12/12 
+第一学年 2017.9  -  2018.6
+第二学年 2018.9  -  2019.6
+第三学年 2019.9  -  2020.7
+第三学年开始实习 一年工作经验  
+16个
+http://mantoudh.me/?luyilu.me
+项目还有一个模块没写
+学完springbootclouddata  mybatis插件
+git学习
+面试题
+简历
+配置中心
+支付？
+f4查看类继承关系
+arrays.类
+断言assert
+生产消费模式。
+jpi mybatisplugn 明天必须高了
+
+八皇后 二进制 docker springcloud  算法 简历
+$ git status 状态
+$ git clone 从xx下载项目
+$ git add app.txt pp.txt
+$ git add xxx.xx 添加到xx区
+$ git commit -m "" 提交
+$ git log 日志
+$ git reset id 倒回commit
+$ git config --global user.email a1752514756@163.com
+$ git push 上传到远端xx
+$ git pull 更新
+$ git merge 将分支合并
+$ git branch name 创建分支
+$ git checkout name 切换到分支
+$ git checkout -b branch2 创建分支并且切换
+& git push --set-upstream origin branch1 设置远端分支
+
+微服务   配置与管理 archaius diamond
+服务注册与发现 eureka  consul zookeeper
+服务调用 rest rpc grpc 协议
+服务熔断器 hystrix envoy
+负载均衡 ribbon nginx
+服务接口 feign
+消息队列 kafka rabbitmq activemq
+ 服务配置中心管理 springcloudconfig chef
+服务路由 zuul
+服务监控 zabbix nagios metrics spectator
+全链路追踪 zipkin brave dapper 
+服务部署 docker openstack kubernetes
+数据流操作开发包 springcloud Stream
+时间消息总线 springcloud bus
+
+qq邮箱授权码：juuuxylniprydcji
+
+registry.docker-cn.com/library/
+docker 部署项目 git 
+https://www.bilibili.com/video/av65306049?p=3
+https://www.bilibili.com/video/av38657363?p=57
+https://blog.csdn.net/liqz666/article/details/82253486
+https://download.oracle.com/otn-pub/jcp/persistence-2.0-fr-oth-JSpec/persistence-2_0-final-spec.pdf?AuthParam=1582960843_33881266546a5154eca2eb7e1eb1a365
+https://blog.csdn.net/z_alvin/article/details/89432378 esearchcrud
+
+
+
+<dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.1.10</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+
+
+
+
+
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.bdqn.springcloud</groupId>
+  <artifactId>cloud2020</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <modules>
+  </modules>
+  <packaging>pom</packaging>
+
+  <!-- 统一管理jar包版本-->
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <junit.version>4.12</junit.version>
+    <lombok.version>1.16.18</lombok.version>
+    <mysql.version>5.1.47</mysql.version>
+    <druid.version>1.1.6</druid.version>
+    <mybatis.spring.boot.version>1.3.2</mybatis.spring.boot.version>
+    <log4j.version>1.2.17</log4j.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <!-- spring boot 2.2.2-->
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>2.2.2.RELEASE</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <!-- spring clould h版-->
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>Hoxton.SR3</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <!-- spring clould alibaba 2.1.0-->
+      <dependency>
+        <groupId>com.alibaba.cloud</groupId>
+        <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+        <version>2.1.0.RELEASE</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>${mysql.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>druid</artifactId>
+        <version>${druid.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.mybatis.spring.boot</groupId>
+        <artifactId>mybatis-spring-boot-starter</artifactId>
+        <version>${mybatis.spring.boot.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <scope>${junit.version}</scope>
+      </dependency>
+      <dependency>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+        <version>${log4j.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>${lombok.version}</version>
+        <optional>true</optional>
+      </dependency>
+
+    </dependencies>
+  </dependencyManagement>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <fork>true</fork>
+          <addResources>true</addResources>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
+14.56
+
+启动consul  cmd窗口 consul agent -dev
+
+1.Ribbon和Nginx区别
+Nginx服务器负载均衡: 客户端所有请求都会交给nginx，
+然后由nginx实现转发请求，即负载均衡是由服务端实现。
+nginx服务负载均衡适合于针对服务器端，比如：tomcat、jetty等
+
+Ribbon本地负载均衡 ：在调用接口的时候、会在eureka注册中心上
+获取注册信息服务列表，获取到之后，缓存在jvm本地，使用本地实现
+rpc远程技术进行调用，即是客户端实现负载均衡。ribbon本地负载均衡适
+合微服务rpc远程调用，比如：dubbo，springcloud等
+
+360简直
